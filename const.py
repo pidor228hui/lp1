@@ -1,4 +1,4 @@
-__version__ = '1.0.0'
+__version__ = '1.1.7'
 __author__ = '[https://m.vk.com/premxm|Автор]'
 
 DEFAULT_DATABASE = {
@@ -30,7 +30,7 @@ DEFAULT_DATABASE = {
 }
 
 CONFIG_PATH = "config.json"
-USE_APP_DATA = False
+USE_APP_DATA = False 
 
 LOGGER_LEVEL = 'INFO'
 VKBOTTLE_LOGGER_LEVEL = 'ERROR'
@@ -44,7 +44,7 @@ ALIASES_REST = "https://raw.githubusercontent.com/lordralinc/idmmulti_lp-rest/ma
 ROLE_PLAY_COMMANDS_REST = "https://raw.githubusercontent.com/lordralinc/idmmulti_lp-rest/master/role_play_commands.json"
 ROLE_PLAY_COMMANDS_USE_REST = True
 
-ENABLE_EVAL = False
+ENABLE_EVAL = True
 ALLOW_SENTRY = True
 SENTRY_URL = "https://7a3f1b116c67453c91600ad54d4b7087@o481403.ingest.sentry.io/5529960"
 
