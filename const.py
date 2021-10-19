@@ -1,5 +1,6 @@
 __version__ = '1.1.7'
 __author__ = '[https://m.vk.com/premxm|Автор]'
+__commands__='https://vk.com/wall-206192128_5'
 
 DEFAULT_DATABASE = {
   "tokens": [],
