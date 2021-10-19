@@ -20,13 +20,13 @@ async def info_wrapper(message: Message, **kwargs):
     version_rest = requests.get(const.VERSION_REST).json()
 
     if version_rest['version'] != const.__version__:
-        update_text = f"\n\n Обновление у вас\n на глазах📡"  \
+        update_text = f"\n\n [https://vk.com/lislp|Запись в группе про обновление 1.1.7]"  \
                       f"\n"
     else:
         update_text = ""
 
     text = f"""
-    🦊 Drocher228 by {__author__}\n V{__version__}
+    🦊 LP by {__author__}\n V{__version__}
     
     📌Префикс команд: {' '.join(db.service_prefixes)}
     
@@ -36,9 +36,8 @@ async def info_wrapper(message: Message, **kwargs):
     
     🛡️Алиасы: {len(db.aliases)}
     
-   [https://vk.com/wall-206192128_5|commands]
-    
-    {update_text}
+    Updates:{update_text}
+      
     """.replace('    ', '')
     await edit_message(
         message,
@@ -58,10 +57,8 @@ async def info_wrapper(message: Message, **kwargs):
     else:
         update_text = ""
 
-    text = f"""
-    🦊 Drocher228 by {__author__}\n V{__version__}
-    
-    ⚙️Команды связанные с чатами:
+    text = f"""   
+    ⚙️Команды для чатов:
     
     🔕Удаление уведомлений:{"&#9989;" if db.delete_all_notify else "&#10060;"}
     🔔Вкл/Выкл уведомлений:{"&#9989;" if db.disable_notifications else "&#10060;"}
@@ -89,9 +86,7 @@ async def info_wrapper(message: Message, **kwargs):
     else:
         update_text = ""
 
-    text = f"""
-    🦊 Drocher228 by {__author__}\n V{__version__}
-    
+    text = f"""   
     🔄Настройки повторялки:
     
     🗨️ Повторялка: {"on&#9989;" if db.repeater_active else "off&#10060;"}
@@ -116,9 +111,7 @@ async def info_wrapper(message: Message, **kwargs):
     else:
         update_text = ""
 
-    text = f"""
-    🦊 Drocher228 by {__author__}\n V{__version__}
-    
+    text = f"""    
     🖇️Префиксы:
     
     ⚜️Удалялка: {db.dd_prefix}
