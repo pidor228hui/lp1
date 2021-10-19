@@ -72,7 +72,7 @@ def lp_startup(database):
     async def _lp_startup():
         api = UserApi.get_current()
         text = f'LP launched\n' \
-               f' Version:{const.__version__}\n'
+               f' Version:{const.__version__}\n' \
                f'author:_{const.__author__}_'
         version_rest = requests.get(const.VERSION_REST).json()
 
